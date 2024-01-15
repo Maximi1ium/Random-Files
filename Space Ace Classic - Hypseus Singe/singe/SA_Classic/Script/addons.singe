@@ -1,0 +1,194 @@
+--[[
+
+PROGRAM NAME:	LUA SINGE ENGINE
+VERSION:		3.3
+AUTHOR:			KARIS (2021)
+Modified by:	Maximi1ium (2024)
+Game:			Space Ace
+
+This file is part of LUA SINGE ENGINE.
+
+	LUA SINGE ENGINE is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation.
+
+	LUA SINGE ENGINE is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+	Thanks to Scott Duensing, RDG.
+
+]]--
+
+
+function startConf()
+
+local i = math.random(2)
+
+	if i == 1 then 
+
+		offsetGameOver = 23490						
+		offsetGameOverend = 23580	
+
+	else
+
+		offsetGameOver = 23596						
+		offsetGameOverend = 23686	
+
+	end
+
+	if iLevel == 1 then
+
+		SCOREMOVE = 684
+
+	elseif iLevel == 2 then
+
+		SCOREMOVE = 684
+
+	elseif iLevel == 3 then
+
+		SCOREMOVE = 684
+
+	elseif iLevel == 4 then
+
+		SCOREMOVE = 684
+
+	elseif iLevel == 5 then
+
+		SCOREMOVE = 684
+
+	elseif iLevel == 6 then
+
+		SCOREMOVE = 1173
+
+	elseif iLevel == 7 then
+
+		SCOREMOVE = 1173
+
+	elseif iLevel == 8 then
+
+		SCOREMOVE = 1173
+
+	elseif iLevel == 9 then
+
+		SCOREMOVE = 1679
+
+	elseif iLevel == 10 then
+
+		SCOREMOVE = 1679
+
+	elseif iLevel == 11 then
+
+		SCOREMOVE = 1679
+
+	elseif iLevel == 12 then
+
+		SCOREMOVE = 2000
+	end	
+
+end
+
+function specialScore(thisMove)
+
+-- Level 1 reverses Level 2
+	if iLevel == 1 and iScene == 2 and thisMove == 1 then BUFFMOVE = 0 end
+	if iLevel == 1 and iScene == 2 and thisMove == 10 then BUFFMOVE = 50 end
+
+-- Level 2 reverses Level 3
+	if iLevel == 2 and iScene == 2 and thisMove == 10 then BUFFMOVE = 0 end
+	if iLevel == 2 and iScene == 2 and thisMove == 15 then BUFFMOVE = 100 end
+
+-- Level 3 reverses Level 4
+	if iLevel == 3 and iScene == 2 and thisMove == 20 then BUFFMOVE = 0 end
+	if iLevel == 3 and iScene == 2 and thisMove == 21 then BUFFMOVE = 150 end
+
+-- Level 4 reverses Level 5
+	if iLevel == 4 and iScene == 2 and thisMove == 20 then BUFFMOVE = 0 end
+	if iLevel == 4 and iScene == 2 and thisMove == 21 then BUFFMOVE = 250 end
+
+-- Level 5 reverses Level 6
+	if iLevel == 5 and iScene == 1 and thisMove == 19 then BUFFMOVE = 0 end
+	if iLevel == 5 and iScene == 1 and thisMove == 20 then BUFFMOVE = 350 end
+
+-- Level 6 reverses Level 7
+	if iLevel == 6 and iScene == 1 and thisMove == 17 then BUFFMOVE = 0 end
+	if iLevel == 6 and iScene == 1 and thisMove == 18 then BUFFMOVE = 450 end
+	
+-- Level 8 reverses Level 9
+	if iLevel == 8 and iScene == 1 and thisMove == 11 then BUFFMOVE = 0 end
+	if iLevel == 8 and iScene == 1 and thisMove == 16 then BUFFMOVE = 550 end
+
+-- Level 9 reverses Level 10
+	if iLevel == 9 and iScene == 1 and thisMove == 7 then BUFFMOVE = 0 end
+	if iLevel == 9 and iScene == 1 and thisMove == 16 then BUFFMOVE = 650 end
+
+-- Level 10 reverses Level 11
+	if iLevel == 10 and iScene == 1 and thisMove == 15 then BUFFMOVE = 0 end
+	if iLevel == 10 and iScene == 1 and thisMove == 19 then BUFFMOVE = 750 end
+
+-- Level 11 reverses Level 12
+	if iLevel == 11 and iScene == 1 and thisMove == 20 then BUFFMOVE = 0 end
+	if iLevel == 11 and iScene == 1 and thisMove == 23 then BUFFMOVE = 850 end
+
+-- Level 12 hack to skip scene.
+	if iLevel == 12 and iScene == 1 and thisMove == 1 then SCORESCENE = 0 end
+	if iLevel == 12 and iScene == 1 and thisMove == 8 then SCORESCENE = 1000 end
+
+end
+
+function swapDeath()
+
+local i = math.random(5)
+
+		if (iLives == 5) then
+
+			if i == 1 then 
+
+				offsetSupDeath = 23809
+				offsetSupDeathEnd = 23865
+
+			elseif i == 2 then
+
+				offsetSupDeath = 23881
+				offsetSupDeathEnd = 23937
+
+			elseif i == 3 then
+
+				offsetSupDeath = 23954
+				offsetSupDeathEnd = 24010
+
+			elseif i == 4 then
+
+				offsetSupDeath = 24027
+				offsetSupDeathEnd = 24083
+
+			elseif i == 5 then
+
+				offsetSupDeath = 24100
+				offsetSupDeathEnd = 24155
+
+			end
+
+		elseif (iLives == 4) then
+
+			offsetSupDeath = 23809
+			offsetSupDeathEnd = 23865
+			
+		elseif (iLives == 3) then
+
+			offsetSupDeath = 23881
+			offsetSupDeathEnd = 23937
+
+		elseif (iLives == 2) then
+
+			offsetSupDeath = 23954
+			offsetSupDeathEnd = 24010
+
+		elseif (iLives == 1) then
+
+			offsetSupDeath = 23797
+			offsetSupDeathEnd = 23807
+
+		end
+
+end
