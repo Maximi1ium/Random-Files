@@ -1,0 +1,630 @@
+--[[
+
+PROGRAM NAME:	LUA SINGE ENGINE
+VERSION:		3.3
+AUTHOR:			KARIS (2021)
+Game:			Dragon's Lair
+
+This file is part of LUA SINGE ENGINE.
+
+	LUA SINGE ENGINE is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation.
+
+	LUA SINGE ENGINE is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+	Thanks to Scott Duensing, RDG.
+
+
+add iScene = 0
+
+]]--
+
+
+function startConf()
+
+	if iLevel == 1 then
+	
+		SCOREMOVE = 684
+
+	elseif iLevel == 2 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 3 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 4 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 5 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 6 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 7 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 8 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 9 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 10 then	
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 11 then
+
+		SCOREMOVE = 684									
+
+	elseif iLevel == 12 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 13 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 14 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 15 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 16 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 17 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 18 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 19 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 20 then
+
+		SCOREMOVE = 1173									
+
+	elseif iLevel == 21 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 22 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 23 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 24 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 25 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 26 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 27 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 28 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 29 then
+
+		SCOREMOVE = 1679									
+
+	elseif iLevel == 30 then
+
+		SCOREMOVE = 2000									
+
+	end	
+
+end
+
+function swapDeath()
+
+	if iLevel == 1 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19419
+			offsetSupDeathEnd = 19475
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 21480
+		offsetGameOverend = 21563
+
+	elseif iLevel == 2 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20204								
+			offsetSupDeathEnd = 20259
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 22569						
+		offsetGameOverend = 22651
+
+	elseif iLevel == 3 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19992
+			offsetSupDeathEnd = 20046
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 22271
+		offsetGameOverend = 22354
+
+	elseif iLevel == 4 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20488		
+			offsetSupDeathEnd = 20542
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 22962
+		offsetGameOverend = 23045
+
+	elseif iLevel == 5 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19635
+			offsetSupDeathEnd = 19689
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 21777
+		offsetGameOverend = 21860
+
+	elseif iLevel == 6 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20558
+			offsetSupDeathEnd = 20614
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23062
+		offsetGameOverend = 23144
+
+	elseif iLevel == 7 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20986
+			offsetSupDeathEnd = 21040
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23654
+		offsetGameOverend = 23737
+
+	elseif iLevel == 8 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20772								
+			offsetSupDeathEnd = 20827
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23358
+		offsetGameOverend = 23441
+
+	elseif iLevel == 9 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19848
+			offsetSupDeathEnd = 19904
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 21480						
+		offsetGameOverend = 21563
+
+	elseif iLevel == 10 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20915
+			offsetSupDeathEnd = 20969
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23555
+		offsetGameOverend = 23638
+
+	elseif iLevel == 11 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 21270
+			offsetSupDeathEnd = 21323
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 24049
+		offsetGameOverend = 24132
+
+	elseif iLevel == 12 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 21056
+			offsetSupDeathEnd = 21111
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23754
+		offsetGameOverend = 23836
+
+	elseif iLevel == 13 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20347
+			offsetSupDeathEnd = 20400
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 22764
+		offsetGameOverend = 22847
+
+	elseif iLevel == 14 then
+
+		if (iScene == 1) then
+
+			if (iLives > 1) then
+				offsetSupDeath = 20275
+				offsetSupDeathEnd = 20330
+			else
+				offsetSupDeath = 32472
+				offsetSupDeathEnd = 32480
+			end
+
+			offsetGameOver = 22668
+			offsetGameOverend = 22748
+		else
+
+			if (iLives > 1) then
+				offsetSupDeath = 20772								
+				offsetSupDeathEnd = 20827
+			else
+				offsetSupDeath = 32472
+				offsetSupDeathEnd = 32480
+			end
+
+			offsetGameOver = 23358
+			offsetGameOverend = 23441
+
+		end
+
+	elseif iLevel == 15 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20417
+			offsetSupDeathEnd = 20471
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 22864
+		offsetGameOverend = 22946
+
+	elseif iLevel == 16 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19492
+			offsetSupDeathEnd = 19547
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 21580
+		offsetGameOverend = 21662
+
+	elseif iLevel == 17 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19563
+			offsetSupDeathEnd = 19619
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 21679
+		offsetGameOverend = 21761
+
+	elseif iLevel == 18 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19921
+			offsetSupDeathEnd = 19975
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 21172
+		offsetGameOverend = 22254
+
+	elseif iLevel == 19 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19706
+			offsetSupDeathEnd = 19760
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 21876
+		offsetGameOverend = 21958
+
+	elseif iLevel == 20 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20133
+			offsetSupDeathEnd = 20188
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 22470
+		offsetGameOverend = 22552
+
+	elseif iLevel == 21 then
+
+		if (iScene == 1) then
+
+			if (iLives > 1) then
+				offsetSupDeath = 20062
+				offsetSupDeathEnd = 20117
+			else
+				offsetSupDeath = 32472
+				offsetSupDeathEnd = 32480
+			end
+
+			offsetGameOver = 22370
+			offsetGameOverend = 22453
+		else
+
+			if (iLives > 1) then
+				offsetSupDeath = 20772								
+				offsetSupDeathEnd = 20827
+			else
+				offsetSupDeath = 32472
+				offsetSupDeathEnd = 32480
+			end
+
+			offsetGameOver = 23358
+			offsetGameOverend = 23441
+
+		end
+
+	elseif iLevel == 22 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19848
+			offsetSupDeathEnd = 19904
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 22074
+		offsetGameOverend = 22156
+
+	elseif iLevel == 23 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20631
+			offsetSupDeathEnd = 20685
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23161
+		offsetGameOverend = 23243
+
+	elseif iLevel == 24 then
+
+		if (iScene == 1) then
+
+			if (iLives > 1) then
+				offsetSupDeath = 21199
+				offsetSupDeathEnd = 21253
+			else
+				offsetSupDeath = 32472
+				offsetSupDeathEnd = 32480
+			end
+
+			offsetGameOver = 23950
+			offsetGameOverend = 24033
+		else
+
+			if (iLives > 1) then
+				offsetSupDeath = 20204								
+				offsetSupDeathEnd = 20259
+			else
+				offsetSupDeath = 32472
+				offsetSupDeathEnd = 32480
+			end
+
+			offsetGameOver = 22569						
+			offsetGameOverend = 22651
+
+		end
+
+	elseif iLevel == 25 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20702
+			offsetSupDeathEnd = 20755
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23259
+		offsetGameOverend = 23342
+
+	elseif iLevel == 26 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 21127
+			offsetSupDeathEnd = 21182
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23853
+		offsetGameOverend = 23934
+
+	elseif iLevel == 27 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 19776
+			offsetSupDeathEnd = 19832
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 21975
+		offsetGameOverend = 22057
+
+	elseif iLevel == 28 then
+
+		if (iScene == 1) then
+
+			if (iLives > 1) then
+				offsetSupDeath = 20772								
+				offsetSupDeathEnd = 20827
+			else
+				offsetSupDeath = 32472
+				offsetSupDeathEnd = 32480
+			end
+
+			offsetGameOver = 23358
+			offsetGameOverend = 23441
+
+		else
+
+			if (iLives > 1) then
+				offsetSupDeath = 20844
+				offsetSupDeathEnd = 20898
+			else
+				offsetSupDeath = 32472
+				offsetSupDeathEnd = 32480
+			end
+
+			offsetGameOver = 23457						
+			offsetGameOverend = 23539
+
+		end
+
+	elseif iLevel == 29 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 20772								
+			offsetSupDeathEnd = 20827
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 23358
+		offsetGameOverend = 23441
+
+	elseif iLevel == 30 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 21339
+			offsetSupDeathEnd = 21394
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 24148
+		offsetGameOverend = 24230
+
+	elseif iLevel == 31 then
+
+		if (iLives > 1) then
+			offsetSupDeath = 21411
+			offsetSupDeathEnd = 21464
+		else
+			offsetSupDeath = 32472
+			offsetSupDeathEnd = 32480
+		end
+
+		offsetGameOver = 24246						
+		offsetGameOverend = 24329	
+
+	end	
+
+end
+
+function swapLevel()  
+
+	startConf()
+
+end
