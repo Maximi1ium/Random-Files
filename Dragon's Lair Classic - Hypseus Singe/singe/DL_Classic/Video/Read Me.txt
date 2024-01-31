@@ -2,7 +2,7 @@ Video can be found in here:
 https://www.emuline.org/topic/2134-singe-2-new-ld-engine-games-332-update-dliie-surprise/
 
 
-it will need to be converted to ,DLe.m2v format.
+it will need to be converted to DLe.m2v format.
 
 Instruction on how to convert can be found here:
 https://github.com/DirtBagXon/hypseus_singe_data
